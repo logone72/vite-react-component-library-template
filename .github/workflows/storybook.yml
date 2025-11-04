@@ -35,6 +35,9 @@ jobs:
           node-version: '22'
           cache: 'npm'
 
+      - name: Install dependencies
+        run: npm install
+
       - name: Build Storybook
         run: npm run build
 
