@@ -5,6 +5,7 @@
   "description": "A template for creating React component libraries with Vite, and Storybook.",
   "author": "logone72",
   "license": "MIT",
+  "packageManager": "npm",
   "type": "module",
   "files": [
     "dist"
