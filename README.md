@@ -12,7 +12,10 @@ This is a starter template for creating React component libraries using Vite. It
 - ESLint: A tool that finds and fixes problems in your code.
 - Prettier: A code formatter.
 - Husky: A pre-commit hook.
-- Github Action: A tool that deploys your Storybook to GitHub page automatically.
+- Commitlint: A tool that enforces commit message conventions.
+- Github Actions: A tool that deploys your Storybook to GitHub page automatically.
+- Github Pages: A tool that hosts your Storybook.
+  - try: https://logone72.github.io/vite-react-component-library-template/
 
 ## Get Started
 
