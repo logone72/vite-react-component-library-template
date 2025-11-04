@@ -39,6 +39,8 @@
     "prepare": "husky install"
   },
   "devDependencies": {
+    "@commitlint/cli": "^20.1.0",
+    "@commitlint/config-conventional": "^20.0.0",
     "@storybook/addon-actions": "^8.5.3",
     "@storybook/addon-essentials": "^8.5.3",
     "@storybook/blocks": "^8.5.3",
