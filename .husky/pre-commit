@@ -1,3 +1,19 @@
-echo "[husky] pre-commit"
+printf "[husky] pre-commit\n"
 
-npx lint-staged
+npx --no lint-staged || exit 1
+
+CHANGED="$(git diff --name-only --cached --diff-filter=ACMR)"
+
+if [ -z "$CHANGED" ]; then
+  printf "no staged files → skip tests\n"
+  exit 0
+fi
+
+printf "changed files:\n%s\n" "$CHANGED"
+
+if ! printf "%s" "$CHANGED" | grep -E '\.(ts|tsx|js|jsx|mjs|cjs)$' >/dev/null; then
+  printf "\n🧪 테스트 대상 코드 변경이 없습니다. 테스트를 스킵합니다.\n"
+  exit 0
+fi
+
+npm run test
