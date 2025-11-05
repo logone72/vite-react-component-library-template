@@ -1,0 +1,12 @@
+# 푸시 대상 범위에서 코드 변경이 없으면 테스트 스킵
+CHANGED="$(git diff --name-only --cached)"
+
+echo "[husky] pre-push"
+echo "changed files: $CHANGED"
+
+if ! echo "$CHANGED" | grep -E '\.(ts|tsx|js|jsx|mjs|cjs)$' >/dev/null; then
+  echo "\n\n🧪 테스트 대상 코드 변경이 없습니다. 테스트를 스킵합니다.\n"
+  exit 0
+fi
+
+npm run test
