@@ -37,7 +37,7 @@ Vite를 사용하여 React 컴포넌트 라이브러리를 생성하기 위한 �
 - `dev`: 로컬 Storybook 서버를 시작합니다. 컴포넌트를 개발하고 미리보기할 때 사용합니다.
 - `test`: Vitest를 사용하여 모든 테스트를 실행합니다.
 - `test:watch`: Watch 모드로 테스트를 실행합니다.
-- `build`: Storybook을 정적 웹 애플리케이션으로 빌드합니다.
+- `build:storybook`: Storybook을 정적 웹 애플리케이션으로 빌드합니다.
 - `build:lib`: Vite를 사용하여 컴포넌트 라이브러리를 빌드합니다.
 - `lint`: ESLint를 실행합니다.
 - `format`: Prettier를 사용하여 코드를 포맷팅합니다.
