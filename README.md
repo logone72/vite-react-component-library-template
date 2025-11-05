@@ -41,3 +41,7 @@ Vite를 사용하여 React 컴포넌트 라이브러리를 생성하기 위한 �
 - `build:lib`: Vite를 사용하여 컴포넌트 라이브러리를 빌드합니다.
 - `lint`: ESLint를 실행합니다.
 - `format`: Prettier를 사용하여 코드를 포맷팅합니다.
+
+## 참고
+
+이 템플릿은 [Vite React Component Library Starter](https://github.com/rayyamhk/vite-react-component-library-starter)를 기반으로 합니다.
