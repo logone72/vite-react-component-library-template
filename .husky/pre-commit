@@ -5,14 +5,14 @@ npx --no lint-staged || exit 1
 CHANGED="$(git diff --name-only --cached --diff-filter=ACMR)"
 
 if [ -z "$CHANGED" ]; then
-  printf "no staged files → skip tests\n"
+  printf "\n🧪 스테이지된 코드가 없습니다. 테스트를 스킵합니다.\n\n"
   exit 0
 fi
 
-printf "changed files:\n%s\n" "$CHANGED"
+printf "\nchanged files:\n%s\n" "$CHANGED"
 
 if ! printf "%s" "$CHANGED" | grep -E '\.(ts|tsx|js|jsx|mjs|cjs)$' >/dev/null; then
-  printf "\n🧪 테스트 대상 코드 변경이 없습니다. 테스트를 스킵합니다.\n"
+  printf "\n🧪 테스트 대상 코드 변경이 없습니다. 테스트를 스킵합니다.\n\n"
   exit 0
 fi
 
