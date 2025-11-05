@@ -62,11 +62,10 @@
     "noImplicitOverride": true,
     "noImplicitReturns": true,
     "noImplicitThis": true,
-    "noPropertyAccessFromIndexSignature": true,
     "noUncheckedIndexedAccess": true,
     "noUnusedLocals": false,
     "noUnusedParameters": true
   },
-  "include": ["./lib/**/*.ts", "./lib/**/*.tsx"],
+  "include": ["./lib/**/*.ts", "./lib/**/*.tsx", "global.d.ts"],
   "exclude": ["./lib/**/*.stories.*"]
 }

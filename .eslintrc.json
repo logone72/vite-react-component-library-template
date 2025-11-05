@@ -15,10 +15,13 @@
     "plugin:storybook/recommended",
     "prettier" // disable all rules conflict with Prettier
   ],
-  "plugins": ["jest-dom"],
+  "plugins": ["jest-dom", "simple-import-sort"],
   "parser": "@typescript-eslint/parser",
   "ignorePatterns": ["dist"],
-  "rules": {},
+  "rules": {
+    "simple-import-sort/imports": "warn",
+    "simple-import-sort/exports": "warn"
+  },
   "settings": {
     "react": {
       "version": "detect"

@@ -1,4 +1,7 @@
+import clsx from 'clsx';
 import React from 'react';
+
+import st from './style.module.scss';
 
 export interface ButtonProps extends React.ButtonHTMLAttributes<HTMLButtonElement> {
   /**
@@ -8,10 +11,10 @@ export interface ButtonProps extends React.ButtonHTMLAttributes<HTMLButtonElemen
 }
 
 export const Button = React.forwardRef<HTMLButtonElement, ButtonProps>(
-  ({ className, ...rest }, ref) => (
+  ({ className, size = 'medium', ...rest }, ref) => (
     <button
       ref={ref}
-      className={className}
+      className={clsx(className, st.button, st[size])}
       {...rest}
     />
   ),
